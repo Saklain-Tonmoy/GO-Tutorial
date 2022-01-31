@@ -8,19 +8,27 @@ const (
 	PI = 3.1416
 )
 
+// Declaring an Interface named Shape with two methods area() and description()
 type Shape interface {
 	area() float64
 	description() string
 }
 
+// Declaring a Struct named Circle
 type Circle struct {
 	radius float64
 }
 
+// Declaring a Struct named Rectangle
 type Rectangle struct {
 	width  float64
 	height float64
 }
+
+// Any Type/Struct/Anything which implements the method "area() float64" and "description() string" is type Shape{}. 
+// That's how the Interface works in Golang
+// The Struct Rectangle, which is defining the method "area()" from the Interface "Shape{}" is basically implementing the Interface "Shape{}". 
+// In order to implement the Interface, it has to define all the methods declared in the interface.
 
 func (r *Rectangle) area() float64 {
 	return r.width * r.height
