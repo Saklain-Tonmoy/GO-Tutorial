@@ -29,6 +29,7 @@ func print(myInterface MyInterface) {
 }
 
 func main() {
+	
 	scanner := bufio.NewScanner(os.Stdin)
 
 	book := Book{}
